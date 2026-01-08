@@ -1,5 +1,8 @@
-from bookshelf.models import Book
+# Retrieve Operation
 
-book = Book.objects.get(id=1)
+```python
+from bookshelf.models import Book
+book = Book.objects.get(title="1984")
 book
+
 
