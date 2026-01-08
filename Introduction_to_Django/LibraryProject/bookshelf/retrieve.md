@@ -1,6 +1,5 @@
-# Retrieve Operation
-
-```python
 from bookshelf.models import Book
-Book.objects.all()  # <QuerySet [<Book: 1984>]>
+
+book = Book.objects.get(id=1)
+book
 
