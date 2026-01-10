@@ -6,5 +6,9 @@ class Book(models.Model):
     publication_year = models.IntegerField()
 
     def __str__(self):
+<<<<<<< HEAD
         return f"{self.title} by {self.author}"
+=======
+        return self.title
+>>>>>>> 02f82937dad22993b12d55292de4307ff018b07e
 
