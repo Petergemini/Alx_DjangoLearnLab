@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Info</title>
+</head>
+<body>
+    <h1>Authors and their Books</h1>
+    <ul>
+        {% for author in authors %}
+            <li>{{ author.name }} wrote:
+                <ul>
+                    {% for book in books %}
+                        {% if book.author.id == author.id %}
+                            <li>{{ book.title }}</li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <h1>Libraries and their Books</h1>
+    <ul>
+        {% for library in libraries %}
+            <li>{{ library.name }} has:
+                <ul>
+                    {% for book in books %}
+                        {% if book.library.id == library.id %}
+                            <li>{{ book.title }}</li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <h1>Librarians</h1>
+    <ul>
+        {% for librarian in librarians %}
+            <li>{{ librarian.name }} works at {{ librarian.library.name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
